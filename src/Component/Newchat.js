@@ -4,6 +4,7 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "../Component/Newchat.css"
+import { Link } from "react-router-dom";
 // import jsondata from "src\\aiData\\sampleData.json"
 
 
@@ -64,7 +65,7 @@ const fetchAnswer=(query)=>{
       console.log("match found");
       return [{ question: match.question, answer: match.response }];
     } else {
-      return [{ question: query, answer:"Sorry, I didn’t understand your query!" }];
+      return [{ question: query, answer:"Sorry, Did not understand your query!" }];
     }
 }
 
@@ -72,9 +73,7 @@ const fetchAnswer=(query)=>{
 setinputvalue(event.target.value);
     }
 
-    const movetoHistorypage=()=>{
-navigate("/history",{ state: { historydata: history } });
-    }
+ 
 
     const saveConversation=()=>{
 localStorage.setItem("chathistory",JSON.stringify(history));
@@ -94,10 +93,12 @@ localStorage.setItem("chathistory",JSON.stringify(history));
 <Button onClick={openNewchat} sx={{width:"208px",height:"47px",backgroundColor: "#D7C7F4",fontFamily:"Ubuntu",fontWeight:"400",fontStyle:"Regular",fontSize:"20px",lineHeight:"100%",color:"#000000"}}className="Newchatheader">
     New Chat
 </Button>
-
-<Button onClick={movetoHistorypage} className="PastConversations" sx={{backgroundColor:"#D7C7F4",width:"175px",height:"39px",pt:"11px",pb:"16px",borderRadius:"10px",fontFamily:"Ubuntu",fontWeight:"700",fontSize:"16px",letterSpacing:"0%",color:"#414146"}}>
+<Link to="/history"  state={{ historydata: history }} style={{ textDecoration: "none" }}>
+<Button className="PastConversations" sx={{backgroundColor:"#D7C7F4",width:"175px",height:"39px",pt:"11px",pb:"16px",borderRadius:"10px",fontFamily:"Ubuntu",fontWeight:"700",fontSize:"16px",letterSpacing:"0%",color:"#414146"}}>
     Past Conversations
-</Button>
+</Button> 
+</Link>
+
 </Box>
 </Box>
 <form onSubmit={(e)=>handleAsk(e)}>
