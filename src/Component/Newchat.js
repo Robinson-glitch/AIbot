@@ -114,7 +114,7 @@ localStorage.setItem("chathistory",JSON.stringify(history));
 </Box>
 </Box>)):""}
 <Box sx={{display:"flex"}}>
-<input onChange={(e)=>getInput(e)} value={input} placeholder="Message Bot AI…" className="inputbox">
+<input onChange={(e)=>getInput(e)} value={input} placeholder="Message Bot AI..." className="inputbox">
 </input>
 <button type="submit" className="Ask">Ask</button>
 <button type="button" onClick={saveConversation} className="Save">Save</button>
