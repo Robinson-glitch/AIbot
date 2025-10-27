@@ -1,0 +1,67 @@
+.Mainchatwindow{
+    width:1280px;
+    height:806px;
+background-color: #D7C7F4;    padding-top: 26px;
+    background: linear-gradient(to right, #9785BA,#D7C7F4);
+    position:relative;
+}
+
+.sidePanel{
+    width:208px;
+    height:806px;
+    background-color: #FFFFFF;
+}
+
+.columnheader{
+    width:208px;
+    height:97px;
+    
+}
+
+/* .Newchatheader{
+    width:208px;
+    height:47px;
+    
+} */
+/* 
+.PastConversations{
+
+padding-top:11px;
+padding-left:16px;
+border-radius: 10px;
+  background-clip: content-box
+} */
+
+.inputbox{
+    width:846px;
+    height:41px;
+    /* padding:751px; */
+   background-color: #FFFFFF;
+   /* background-clip: content-box; */
+   padding-left:14px;
+   
+}
+
+.Ask {
+    width:73px;
+    height:41px;
+    
+}
+.Save{
+      width:73px;
+    height:41px;
+}
+
+.Questionmessagebox{
+    width:1015px;
+    height:105px;
+    border:1px solid black
+
+}
+
+.Answermessagebox{
+     width:1015px;
+    height:105px;
+    border:1px solid black
+}
+

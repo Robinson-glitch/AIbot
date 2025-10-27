@@ -1,0 +1,11 @@
+.Mainchatwindow{
+    width:1280px;
+    height:806px;
+    padding-top: 26px;
+    background: linear-gradient(to right, #9785BA,#D7C7F4);
+}
+
+.historyConvoBox{
+    border:1px solid black;
+}
+
