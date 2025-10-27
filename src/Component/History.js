@@ -18,9 +18,7 @@ const History=({history})=>{
 <div>Past Conversations</div>
 {historydata.length!==0?historydata.map((data,index)=>(
 <div key={index} className="historyConvoBox" sx={{display:"flex",flexDirection:"column",gap:"42px"}}>   
-        <span>You</span>
        <div>{data.question}</div>
-       <span>Soul AI</span>
        <div>{data.answer}</div>
 </div>
 )):""}
