@@ -92,9 +92,11 @@ localStorage.setItem("chathistory",JSON.stringify(history));
 <Box sx={{display:"flex", alignItems:"flex-end",gap:"14px"}}>
 <Box className="sidePanel">
 <Box className="columnheader">
-<Button onClick={openNewchat} sx={{width:"208px",height:"47px",backgroundColor: "#D7C7F4",fontFamily:"Ubuntu",fontWeight:"400",fontStyle:"Regular",fontSize:"20px",lineHeight:"100%",color:"#000000"}}className="Newchatheader">
+<Link to="/">
+<Button  sx={{width:"208px",height:"47px",backgroundColor: "#D7C7F4",fontFamily:"Ubuntu",fontWeight:"400",fontStyle:"Regular",fontSize:"20px",lineHeight:"100%",color:"#000000"}}className="Newchatheader">
     New Chat
 </Button>
+</Link>
 <Link to="/history"  state={{ historydata: history }} style={{ textDecoration: "none" }}>
 <Button className="PastConversations" sx={{backgroundColor:"#D7C7F4",width:"175px",height:"39px",pt:"11px",pb:"16px",borderRadius:"10px",fontFamily:"Ubuntu",fontWeight:"700",fontSize:"16px",letterSpacing:"0%",color:"#414146"}}>
     Past Conversations

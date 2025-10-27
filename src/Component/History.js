@@ -14,21 +14,17 @@ const History=({history})=>{
   [];
   console.log("historydata",historydata);
     return(
-<Box className="Mainchatwindow">
+<div className="Mainchatwindow">
 <div>Past Conversations</div>
 {historydata.length!==0?historydata.map((data,index)=>(
-<Box key={index} className="historyConvoBox" sx={{display:"flex",flexDirection:"column",gap:"42px"}}>
-    
+<div key={index} className="historyConvoBox" sx={{display:"flex",flexDirection:"column",gap:"42px"}}>   
         <span>You</span>
        <div>{data.question}</div>
-    
- 
        <span>Soul AI</span>
        <div>{data.answer}</div>
-
-</Box>
+</div>
 )):""}
-</Box>
+</div>
     )
 }
 
