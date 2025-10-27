@@ -8,23 +8,26 @@ import { useLocation } from "react-router-dom";
 
 const History=({history})=>{
     const location = useLocation();
-  const historydata= location.state.historydata;
+ const historydata =
+  location.state?.historydata ||
+  JSON.parse(localStorage.getItem("chathistory")) ||
+  [];
   console.log("historydata",historydata);
     return(
 <Box className="Mainchatwindow">
 <div>Past Conversations</div>
 {historydata.length!==0?historydata.map((data,index)=>(
-<Box className="historyConvoBox" sx={{display:"flex",flexDirection:"column",gap:"42px"}}>
-    <Box >
+<Box key={index} className="historyConvoBox" sx={{display:"flex",flexDirection:"column",gap:"42px"}}>
+    
         <span>You</span>
        <div>{data.question}</div>
-    </Box>
-        <Box>
+    
+ 
        <span>Soul AI</span>
        <div>{data.answer}</div>
-       </Box>
+
 </Box>
-)):""};
+)):""}
 </Box>
     )
 }

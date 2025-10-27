@@ -86,7 +86,9 @@ localStorage.setItem("chathistory",JSON.stringify(history));
 
     return(
 <Box className="Mainchatwindow">
+<header>
 <h1 style={{width:"85px",height:"32px",fontSize:"28px",fontStyle:"Bold",position:"absolute",left:"232px"}}>Bot AI</h1>
+</header>
 <Box sx={{display:"flex", alignItems:"flex-end",gap:"14px"}}>
 <Box className="sidePanel">
 <Box className="columnheader">
