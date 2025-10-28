@@ -78,9 +78,7 @@ setinputvalue(event.target.value);
 
  
 
-    const saveConversation=()=>{
-localStorage.setItem("chathistory",JSON.stringify(history));
-    }
+  
 
     const openNewchat=()=>{
         localStorage.removeItem("chathistory");
@@ -96,7 +94,7 @@ localStorage.setItem("chathistory",JSON.stringify(history));
 <Box className="sidePanel">
 <Box className="columnheader">
 <Link to="/">
-<Button  sx={{width:"208px",height:"47px",backgroundColor: "#D7C7F4",fontFamily:"Ubuntu",fontWeight:"400",fontStyle:"Regular",fontSize:"20px",lineHeight:"100%",color:"#000000"}}className="Newchatheader">
+<Button onClick={openNewchat} sx={{width:"208px",height:"47px",backgroundColor: "#D7C7F4",fontFamily:"Ubuntu",fontWeight:"400",fontStyle:"Regular",fontSize:"20px",lineHeight:"100%",color:"#000000"}}className="Newchatheader">
     New Chat
 </Button>
 </Link>
@@ -125,7 +123,7 @@ localStorage.setItem("chathistory",JSON.stringify(history));
 <input onChange={(e)=>getInput(e)} value={input} placeholder="Message Bot AI..." className="inputbox">
 </input>
 <button type="submit" className="Ask">Ask</button>
-<button type="button" onClick={saveConversation} className="Save">Save</button>
+<button type="button" className="Save">Save</button>
 </Box>
 </Box>
 </form>
