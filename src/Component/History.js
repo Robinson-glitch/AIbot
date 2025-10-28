@@ -7,10 +7,8 @@ import "../Component/History.css"
 import { useLocation } from "react-router-dom";
 
 const History=()=>{
-    const location = useLocation();
- const historydata =
-  location.state?.historydata ||
-  JSON.parse(localStorage.getItem("chathistory")) ||
+    
+ const historydata =JSON.parse(localStorage.getItem("chathistory")) ||
   [];
     return(
 <div className="Mainchatwindow">
