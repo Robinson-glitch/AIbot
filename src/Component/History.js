@@ -1,15 +1,11 @@
-import { Typography } from "@mui/material";
-import { Button, CircularProgress, Stack, TextField} from "@mui/material";
-import { Box } from "@mui/system";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
 import "../Component/History.css"
-import { useLocation } from "react-router-dom";
 
 const History=()=>{
-    
+
  const historydata =JSON.parse(localStorage.getItem("chathistory")) ||
   [];
+
+  console.log("historudata",historydata);
     return(
 <div className="Mainchatwindow">
 <div>Past Conversations</div>
