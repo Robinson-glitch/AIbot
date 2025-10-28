@@ -6,13 +6,12 @@ import React, { useEffect, useState } from "react";
 import "../Component/History.css"
 import { useLocation } from "react-router-dom";
 
-const History=({history})=>{
+const History=()=>{
     const location = useLocation();
  const historydata =
   location.state?.historydata ||
   JSON.parse(localStorage.getItem("chathistory")) ||
   [];
-  console.log("historydata",historydata);
     return(
 <div className="Mainchatwindow">
 <div>Past Conversations</div>

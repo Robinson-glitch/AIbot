@@ -37,7 +37,10 @@ const navigate= useNavigate();
 event.preventDefault();
     setTimeout(() => {
       const result = fetchAnswer(input);
-   sethistory(prev=>[...prev,...result]);
+   sethistory(prev=>{const updated=[...prev,...result];
+    localStorage.setItem("chathistory",JSON.stringify(updated));
+    return updated;
+   });
     
     //   setAnswerKey(prev => [...prev, ...result]);
      setinputvalue("");
@@ -80,8 +83,8 @@ localStorage.setItem("chathistory",JSON.stringify(history));
     }
 
     const openNewchat=()=>{
-        localStorage.clear();
-        sethistory("");
+        localStorage.removeItem("chathistory");
+        sethistory([]);
     }
 
     return(
